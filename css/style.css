@@ -16,6 +16,11 @@ body {
     display: none;
 }
 
+.content {
+    width: calc(100% - 250px);
+    margin-right: 0;
+}
+
 
 /* ---------------------------------------------------
     BUTTON STYLE
@@ -61,6 +66,8 @@ body {
     -moz-transition: margin .25s ease-out;
     -o-transition: margin .25s ease-out;
     transition: margin .25s ease-out;
+    position: fixed;
+    z-index: 1010;
 }
 
 #sidebar-wrapper .sidebar-heading {
@@ -96,6 +103,7 @@ body {
     }
 }
 
+
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
@@ -106,6 +114,14 @@ body {
     }
     .fl-btn {
         float: none!important;
+    }
+    
+    .content {
+        width: 100%;
+    }
+    
+    .sidebar-heading {
+        display: none;
     }
 }
 
