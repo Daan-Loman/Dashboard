@@ -24,9 +24,9 @@
     <div class="d-flex" id="wrapper">
 
         <!-- Sidebar -->
-        <div class="bg-white border-right" id="sidebar-wrapper">
-            <div class="sidebar-heading"><img src="assets/logo-text-icon.png"> </div>
-            <div class="list-group list-group-flush">
+        <div class="bg-white border-right mt-5" id="sidebar-wrapper">
+
+            <div class="list-group list-group-flush mt-5">
                 <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-chart-line mr-2"></i>Overzicht</a>
                 <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-envelope mr-2"></i>Berichten</a>
                 <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-users mr-2"></i>Gebruikers</a>
@@ -40,6 +40,8 @@
         <div id="page-content-wrapper">
 
             <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+
+                <div class="sidebar-heading"><img src="assets/logo-text-icon.png"> </div>
 
                 <button class="btn" id="menu-toggle"><i class="fas fa-bars"></i></button>
 
@@ -75,7 +77,7 @@
                 </div>
             </nav>
 
-            <div class="container-fluid">
+            <div class="container-fluid content">
                 <!-- Page Heading -->
                 <div class="row mt-5">
                     <div class="col-md-5 mb-2">
@@ -203,59 +205,58 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-12 col-md-6">
-                        <div class="card shadow-sm border-0 mb-4">
-                            <table class="table table-stretched">
-                                <thead>
-                                    <tr>
-                                        <th>Top items</th>
-                                        <th>Weergaven</th>
-                                        <th>Verandering</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <p class="mb-n1 font-weight-medium">NIEUWSFEED</p><small class="text-gray">Nieuwsfeed</small></td>
-                                        <td class="font-weight-medium">13.213</td>
-                                        <td class="text-danger font-weight-medium">
-                                            <div class="badge badge-success">-1.39%</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p class="mb-n1 font-weight-medium">CONTACTENLIJST</p><small class="text-gray">Contactenlijst</small></td>
-                                        <td class="font-weight-medium">12.898</td>
-                                        <td class="text-danger font-weight-medium">
-                                            <div class="badge badge-danger">-1.17%</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p class="mb-n1 font-weight-medium">TIPS &amp; TRICKS</p><small class="text-gray">Retail</small></td>
-                                        <td class="font-weight-medium">11.943</td>
-                                        <td class="text-danger font-weight-medium">
-                                            <div class="badge badge-success">-0.24%</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p class="mb-n1 font-weight-medium">PRODUCT TRAININGEN</p><small class="text-gray">Retail</small></td>
-                                        <td class="font-weight-medium">11.714</td>
-                                        <td class="text-success font-weight-medium">
-                                            <div class="badge badge-success">+0.15%</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p class="mb-n1 font-weight-medium">WIJZIGINGEN</p><small class="text-gray">HR</small></td>
-                                        <td class="font-weight-medium">11.213</td>
-                                        <td class="text-success font-weight-medium">
-                                            <div class="badge badge-success">+0.67%</div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div class="col-xl-4 col-lg-12">
+                        <div class="card shadow-sm mb-4 border-0">
+                            <div class="card-header bg-white border-0">
+                                <div class="float-left">
+                                    <div class="widget-heading">Top items</div>
+                                </div>
+                                <div class="float-right">
+                                    <div class="float-right">
+                                        <button type="button" class="btn btn-outline-custom">
+                                            <div class="dropdown no-arrow">
+                                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-sm fa-fw text-gray-400"></i>Weergaven
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(17px, 18px, 0px);">
+                                                    <div class="dropdown-header">Selecteer activiteit</div>
+                                                    <a class="dropdown-item" href="#">Weergaven</a>
+                                                    <a class="dropdown-item" href="#">Likes</a>
+                                                    <a class="dropdown-item" href="#">Reacties</a>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <table class="table" id="dataTable" width="100%" cellspacing="0">
+
+
+                                    <tbody>
+                                        <tr class="custom-table-text">
+                                            <td>Nieuwsfeed</td>
+                                            <td class="float-right">13.213</td>
+                                        </tr>
+                                        <tr class="custom-table-text">
+                                            <td>Contactenlijst</td>
+                                            <td class="float-right">12.898</td>
+                                        </tr>
+                                        <tr class="custom-table-text">
+                                            <td>Tips & tricks</td>
+                                            <td class="float-right">11.943</td>
+                                        </tr>
+                                        <tr class="custom-table-text">
+                                            <td>Product trainingen</td>
+                                            <td class="float-right">11.714</td>
+                                        </tr>
+                                        <tr class="custom-table-text">
+                                            <td>Wijzigingen</td>
+                                            <td class="float-right">11.213</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
 
